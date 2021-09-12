@@ -40,7 +40,8 @@ switch (args[0].toLowerCase()) {
         .setColor("#079898")
         .setTitle(`Commands:`)
         .addField("+profile","Show stats of a player.")
-        .addField("+squad","Current roster of the team.")
+        .addField("+squad","Current roster of the main team.")
+        .addField("+academy","Current roster of the academy team.")
         .addField("+s11","Season 11 roster of the team.")
         .addField("+s10","Season 10 roster of the team.")
         .addField("+s9","Season 9 roster of the team.")
@@ -65,7 +66,16 @@ switch (args[0].toLowerCase()) {
                 if(message.mentions.members.first().id == "634872299069374488"){
                     playername = "> BW <"
                     playerflag = ":flag_ma:"
-                    playerpos = "All"
+                    playerpos = "GK"
+                    playergoals = "0";
+                    playerassists = "0";
+                    playercps = "0";
+                    playerminutes = "0";
+                }
+                if(message.mentions.members.first().id == "443111787047419904"){
+                    playername = "deto"
+                    playerflag = ":flag_sk:"
+                    playerpos = "DM"
                     playergoals = "0";
                     playerassists = "0";
                     playercps = "0";
@@ -80,27 +90,18 @@ switch (args[0].toLowerCase()) {
                     playercps = "0";
                     playerminutes = "0";
                 }
-                if(message.mentions.members.first().id == "273131438306754560"){
-                    playername = "DYNASTY"
-                    playerflag = ":flag_tr:"
-                    playerpos = "DM"
-                    playergoals = "0";
-                    playerassists = "0";
-                    playercps = "0";
-                    playerminutes = "0";
-                }
-                if(message.mentions.members.first().id == "647757857621540884"){
-                    playername = "JuVeN"
-                    playerflag = ":flag_pl:"
+                if(message.mentions.members.first().id == "686560019600506940"){
+                    playername = "Kratos"
+                    playerflag = ":flag_be:"
                     playerpos = "AM"
                     playergoals = "0";
                     playerassists = "0";
                     playercps = "0";
                     playerminutes = "0";
                 }
-                if(message.mentions.members.first().id == "686560019600506940"){
-                    playername = "Kratos"
-                    playerflag = ":flag_be:"
+                if(message.mentions.members.first().id == "415607266130001931"){
+                    playername = "Ziyech"
+                    playerflag = ":flag_ma:"
                     playerpos = "AM"
                     playergoals = "0";
                     playerassists = "0";
@@ -147,7 +148,16 @@ switch (args[0].toLowerCase()) {
                 if(message.author.id == "634872299069374488"){
                     playername = "> BW <"
                     playerflag = ":flag_ma:"
-                    playerpos = "All"
+                    playerpos = "GK"
+                    playergoals = "0";
+                    playerassists = "0";
+                    playercps = "0";
+                    playerminutes = "0";
+                }
+                if(message.author.id == "443111787047419904"){
+                    playername = "deto"
+                    playerflag = ":flag_sk:"
+                    playerpos = "DM"
                     playergoals = "0";
                     playerassists = "0";
                     playercps = "0";
@@ -162,27 +172,18 @@ switch (args[0].toLowerCase()) {
                     playercps = "0";
                     playerminutes = "0";
                 }
-                if(message.author.id == "273131438306754560"){
-                    playername = "DYNASTY"
-                    playerflag = ":flag_tr:"
-                    playerpos = "DM"
-                    playergoals = "0";
-                    playerassists = "0";
-                    playercps = "0";
-                    playerminutes = "0";
-                }
-                if(message.author.id == "647757857621540884"){
-                    playername = "JuVeN"
-                    playerflag = ":flag_pl:"
+                if(message.author.id == "686560019600506940"){
+                    playername = "Kratos"
+                    playerflag = ":flag_be:"
                     playerpos = "AM"
                     playergoals = "0";
                     playerassists = "0";
                     playercps = "0";
                     playerminutes = "0";
                 }
-                if(message.author.id == "686560019600506940"){
-                    playername = "Kratos"
-                    playerflag = ":flag_be:"
+                if(message.author.id == "415607266130001931"){
+                    playername = "Ziyech"
+                    playerflag = ":flag_ma:"
                     playerpos = "AM"
                     playergoals = "0";
                     playerassists = "0";
@@ -240,7 +241,7 @@ switch (args[0].toLowerCase()) {
     break;
 
     case "academy":
-        if(message.member.roles.cache.has("860669274237304882")){
+        if(message.member.roles.cache.has("860669274237304882") || message.member.roles.cache.has("885881044702724166")){
             message.channel.send(new Discord.MessageEmbed()
             .setColor("#5091cf")
             .setTitle("Athletic Reconnaissance Academy")
