@@ -253,7 +253,7 @@ switch (args[0].toLowerCase()) {
 :flag_fr: <@449707849661284353>
 :flag_ru: <@598556892918448138>
 :flag_az: <@468680458771628032>`)
-            .setThumbnail("https://cdn.discordapp.com/attachments/768065930882056213/874819420340506624/logo-3.png")
+            .setThumbnail("https://media.discordapp.net/attachments/885891677217230848/885993189968863263/academy.png")
             .setFooter("Season 12")
             );
         }
